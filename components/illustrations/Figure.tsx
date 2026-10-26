@@ -173,7 +173,16 @@ function Prop({ look }: { look: Look }) {
   }
 }
 
-export function StaffFigure({ kind, className }: { kind: FigureKind; className?: string }) {
+export function StaffFigure({
+  kind,
+  className,
+  frame,
+}: {
+  kind: FigureKind;
+  className?: string;
+  /** Poziție și mărime când portretul e inclus într-o scenă SVG. */
+  frame?: { x: number; y: number; width: number };
+}) {
   const look = looks[kind];
   const id = useId().replace(/:/g, "");
   const clip = `arc-${id}`;
@@ -184,7 +193,10 @@ export function StaffFigure({ kind, className }: { kind: FigureKind; className?:
     <svg
       className={`figure ${className ?? ""}`}
       viewBox="0 0 200 220"
-      role="img"
+      x={frame?.x}
+      y={frame?.y}
+      width={frame?.width}
+      height={frame ? (frame.width * 220) / 200 : undefined}
       aria-hidden="true"
       focusable="false"
     >
@@ -288,7 +300,7 @@ export function ClientSilhouette({
       <path d="M-50 96c4-32 22-48 46-52" fill="none" stroke="#FFFDF8" strokeOpacity=".3" strokeWidth=".8" />
       <path d="M-10 18h20v22h-20Z" fill={tone} />
       <ellipse cx="0" cy="-6" rx="22" ry="27" fill={tone} />
-      <path d={hair} fill="#1D2420" opacity=".55" />
+      <path d={hair} fill="#0F201B" />
       <path d="M14 -20q8 14 0 32" fill="none" stroke="#FFFDF8" strokeOpacity=".35" strokeWidth=".8" />
     </g>
   );

@@ -1818,3 +1818,157 @@ main:focus {
 .fees tbody tr:last-child > * {
   border-bottom: 0;
 }
+
+/* ==========================================================================
+   Procedura: cronologie animată
+   ========================================================================== */
+
+.container--narrow {
+  max-width: 860px;
+}
+.art-panel--wide {
+  padding: 6% 4% 0;
+}
+.page-hero--art .page-hero__art:has(.art-panel--wide) {
+  max-width: 480px;
+}
+
+.timeline {
+  --node: 64px;
+  position: relative;
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+  display: grid;
+  gap: 28px;
+}
+/* Linia de fundal și linia de progres */
+.timeline::before,
+.timeline::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--node) / 2 - 1px);
+  top: calc(var(--node) / 2);
+  bottom: calc(var(--node) / 2);
+  width: 2px;
+}
+.timeline::before {
+  background: repeating-linear-gradient(to bottom, var(--line-strong) 0 4px, transparent 4px 9px);
+}
+.timeline::after {
+  background: var(--brass);
+  transform-origin: top;
+  transform: scaleY(var(--progress, 1));
+}
+.timeline__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--node) 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.timeline__node {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--node);
+  height: var(--node);
+  border-radius: 50%;
+  background: var(--ivory);
+  color: var(--green);
+  box-shadow: 0 0 0 6px var(--parchment);
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+.timeline__ring {
+  position: absolute;
+  inset: -4px;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  fill: none;
+  stroke: var(--brass);
+  stroke-width: 1.5;
+  rotate: -90deg;
+}
+.timeline__step[data-reached="true"] .timeline__node {
+  background: var(--green);
+  color: var(--brass-light);
+}
+.timeline__card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+}
+.timeline__card h2 {
+  font-size: 1.55rem;
+  margin-bottom: 8px;
+}
+.timeline__index {
+  margin: 0 0 4px;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass-ink);
+}
+.timeline__meta {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 0.93rem;
+}
+@media (min-width: 640px) {
+  .timeline {
+    --node: 72px;
+    gap: 36px;
+  }
+  .timeline__step {
+    gap: 28px;
+  }
+  .timeline__card {
+    padding: 24px 28px;
+  }
+  .timeline__meta {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+  }
+}
+.timeline__meta dt {
+  font-weight: 650;
+  color: var(--green);
+}
+.timeline__meta dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Animația rulează doar cu JS și mișcare permisă; altfel totul e afișat complet. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .timeline::after {
+    transition: transform 0.9s var(--ease);
+  }
+  html.js .timeline__ring circle {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.9s var(--ease) 0.15s;
+  }
+  html.js .timeline__step[data-reached="true"] .timeline__ring circle {
+    stroke-dashoffset: 0;
+  }
+  html.js .timeline__card {
+    opacity: 0.45;
+    translate: 12px 0;
+    transition:
+      opacity 0.6s ease,
+      translate 0.7s var(--ease);
+  }
+  html.js .timeline__step[data-reached="true"] .timeline__card {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

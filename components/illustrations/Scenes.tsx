@@ -102,11 +102,9 @@ export function StampScene() {
 export function SigningScene() {
   return (
     <svg className="signing-scene" viewBox="0 0 520 300" aria-hidden="true" focusable="false">
-      <ClientSilhouette variant={1} x={92} y={128} scale={0.9} />
-      <ClientSilhouette variant={0} x={180} y={140} scale={0.95} tone="#244339" />
-      <g transform="translate(330 40) scale(.95)">
-        <StaffFigure kind="notary" />
-      </g>
+      <ClientSilhouette variant={1} x={96} y={124} scale={1.1} />
+      <ClientSilhouette variant={0} x={200} y={136} scale={1.05} tone="#244339" />
+      <StaffFigure kind="notary" frame={{ x: 318, y: 22, width: 190 }} />
       <rect x="10" y="236" width="500" height="20" rx="3" fill="#E6DAC0" stroke={INK} strokeWidth="1.1" />
       <path d="M10 240h500" stroke={BRASS} strokeWidth="1" />
       <g transform="rotate(-4 260 226)">
