@@ -1961,8 +1961,8 @@ main:focus {
     stroke-dashoffset: 0;
   }
   html.js .timeline__card {
-    opacity: 0.45;
-    translate: 12px 0;
+    opacity: 0;
+    translate: 16px 0;
     transition:
       opacity 0.6s ease,
       translate 0.7s var(--ease);

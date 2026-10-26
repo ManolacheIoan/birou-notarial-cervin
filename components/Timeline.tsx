@@ -30,7 +30,7 @@ export function Timeline({ steps }: { steps: ProcedureStep[] }) {
           }
         }
       },
-      { rootMargin: "0px 0px -35% 0px" },
+      { rootMargin: "0px 0px -15% 0px" },
     );
     items.forEach((el) => io.observe(el));
     return () => io.disconnect();

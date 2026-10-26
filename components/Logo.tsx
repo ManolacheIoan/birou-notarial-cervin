@@ -67,10 +67,10 @@ export function SealMark({
 export function Logo({ className }: { className?: string }) {
   const prefix = BUSINESS_NAME.slice(0, BUSINESS_NAME.length - BUSINESS_SHORT.length).trim();
   return (
-    <Link href="/" className={`logo ${className ?? ""}`} aria-label={`${BUSINESS_NAME}, prima pagină`}>
+    <Link href="/" className={`logo ${className ?? ""}`}>
       <SealMark size={46} className="seal--draw" />
       <span className="logo__word">
-        {prefix && <span className="logo__prefix">{prefix}</span>}
+        {prefix && <span className="logo__prefix">{prefix} </span>}
         <span className="logo__name">{BUSINESS_SHORT}</span>
       </span>
     </Link>
