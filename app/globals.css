@@ -2199,3 +2199,69 @@ main:focus {
   min-height: 0;
   padding: 0;
 }
+
+/* ==========================================================================
+   Întrebări frecvente
+   ========================================================================== */
+
+.accordion {
+  border-top: 1px solid var(--line-strong);
+  margin-bottom: 32px;
+}
+.accordion__item {
+  border-bottom: 1px solid var(--line-strong);
+}
+.accordion__heading {
+  margin: 0;
+  font-size: inherit;
+}
+.accordion__heading button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+  padding: 18px 4px;
+  background: none;
+  border: 0;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
+  font-weight: 600;
+  color: var(--green);
+  cursor: pointer;
+}
+.accordion__heading button:hover span {
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.accordion__heading .icon {
+  flex: none;
+  color: var(--brass-ink);
+  transition: transform 0.3s var(--ease);
+}
+.accordion__item[data-open="true"] .icon {
+  transform: rotate(180deg);
+}
+.accordion__panel {
+  padding: 0 4px 20px;
+  color: var(--muted);
+  max-width: 68ch;
+}
+.accordion__panel p {
+  margin: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .accordion__panel:not([hidden]) {
+    animation: panel-in 0.35s var(--ease);
+  }
+}
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
