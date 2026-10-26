@@ -1377,3 +1377,240 @@ main:focus {
 .notice__body p:last-child {
   margin: 0;
 }
+
+/* ==========================================================================
+   Acte necesare
+   ========================================================================== */
+
+.checklist {
+  display: grid;
+  gap: 28px;
+  align-items: start;
+  padding-bottom: 40px;
+}
+@media (min-width: 1000px) {
+  .checklist {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 40px;
+  }
+}
+.field-group {
+  border: 0;
+  padding: 0;
+  margin: 0 0 28px;
+  min-width: 0;
+}
+.field-group legend {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--green);
+  margin-bottom: 14px;
+  padding: 0;
+}
+.service-picker {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+}
+.service-option {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.service-option input,
+.doc-item input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.service-option__box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 52px;
+  height: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--ivory);
+  font-size: 0.95rem;
+  font-weight: 550;
+  line-height: 1.3;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+.service-option__box .icon {
+  flex: none;
+  color: var(--brass-ink);
+}
+.service-option:hover .service-option__box {
+  border-color: var(--brass);
+}
+.service-option input:checked + .service-option__box {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--ivory);
+}
+.service-option input:checked + .service-option__box .icon {
+  color: var(--brass-light);
+}
+.service-option input:focus-visible + .service-option__box,
+.doc-item input:focus-visible ~ .doc-item__box {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+.situations {
+  display: grid;
+  gap: 6px;
+}
+.check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.check:hover {
+  background: var(--parchment-2);
+}
+.check input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0;
+  accent-color: var(--green);
+}
+
+.checklist__sheet {
+  position: relative;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 28px 22px;
+  box-shadow: var(--shadow-lift);
+}
+.checklist__sheet::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgb(168 132 63 / 0.35);
+  pointer-events: none;
+}
+@media (min-width: 720px) {
+  .checklist__sheet {
+    padding: 36px 36px 30px;
+  }
+}
+.checklist__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+  margin-bottom: 18px;
+}
+.checklist__head h2 {
+  margin: 0 0 6px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+.checklist__head .small {
+  margin: 0;
+  max-width: 48ch;
+}
+.checklist__progress {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.checklist__progress strong {
+  color: var(--green);
+}
+.checklist__group h3 {
+  font-family: var(--font-text);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass-ink);
+  margin: 18px 0 8px;
+}
+.checklist__group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.doc-item {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 6px;
+  border-bottom: 1px dashed var(--line);
+  cursor: pointer;
+}
+.doc-item__box {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  border: 1.5px solid var(--brass);
+  border-radius: 3px;
+  background: var(--ivory);
+  color: transparent;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+.doc-item input:checked ~ .doc-item__box {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--ivory);
+}
+.doc-item input:checked ~ span:last-child {
+  color: var(--muted);
+}
+.doc-item__note {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.checklist__disclaimer {
+  margin: 22px 0 0;
+  padding: 14px 16px;
+  background: #fbf6ea;
+  border-left: 2px solid var(--brass);
+  font-size: 0.93rem;
+}
+.checklist__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+@media print {
+  .checklist {
+    display: block;
+  }
+  .checklist__sheet {
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    position: static;
+  }
+  .checklist__sheet::before {
+    display: none;
+  }
+  .page-hero .lead,
+  .notice {
+    display: none;
+  }
+  .doc-item__box {
+    border-color: #000;
+  }
+}
