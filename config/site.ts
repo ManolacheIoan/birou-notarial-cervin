@@ -12,9 +12,9 @@ export const site = {
   tagline: "acte autentice, explicate pe înțeles",
   shortDescription:
     "birou notarial pentru vânzări, donații, succesiuni, procuri, testamente și legalizări. Programări telefonic sau online.",
-  phone: "0310 405 218",
+  phone: "0371 284 937",
   /** Format internațional pentru linkurile tel: */
-  phoneHref: "+40310405218",
+  phoneHref: "+40371284937",
   email: "secretariat@notarcervin.ro",
   area: "România",
   address: {
