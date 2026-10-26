@@ -70,4 +70,13 @@ createServer(async (req, res) => {
   if (file.includes("/_next/static/")) headers["cache-control"] = "public, max-age=31536000, immutable";
   res.writeHead(200, headers);
   res.end(body);
-}).listen(port, () => console.log(`http://localhost:${port}`));
+})
+  .on("error", (err) => {
+    if (err.code === "EADDRINUSE") {
+      console.log(`Portul ${port} este deja folosit: site-ul rulează probabil deja la http://localhost:${port}`);
+      console.log(`Pentru a-l opri: lsof -ti tcp:${port} | xargs kill`);
+      process.exit(1);
+    }
+    throw err;
+  })
+  .listen(port, () => console.log(`http://localhost:${port}`));
