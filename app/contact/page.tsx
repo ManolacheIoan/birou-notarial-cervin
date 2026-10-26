@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { HoursTable } from "@/components/HoursTable";
 import { CalendarIcon, ClockIcon, MailIcon, PhoneIcon, PinIcon } from "@/components/icons";
+import { ArtPanel } from "@/components/illustrations/Guilloche";
 import { StreetPlan } from "@/components/illustrations/Scenes";
 import { PageHero } from "@/components/PageHero";
 import { BUSINESS_NAME, hours, site } from "@/config/site";
@@ -72,9 +73,9 @@ export default function ContactPage() {
           </div>
           <div className="contact-side">
             <figure className="contact-map">
-              <div className="art-panel">
+              <ArtPanel id="g-map">
                 <StreetPlan />
-              </div>
+              </ArtPanel>
               <figcaption>Plan schematic: biroul se află la colțul străzii, lângă parc.</figcaption>
             </figure>
             <Link className="btn btn--primary" href="/programari/">

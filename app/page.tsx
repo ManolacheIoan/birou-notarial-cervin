@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ContactStrip } from "@/components/ContactStrip";
 import { ArrowIcon, CalendarIcon, CheckIcon, ClockIcon, DocumentIcon, ServiceIcon, ShieldIcon } from "@/components/icons";
 import { StaffFigure } from "@/components/illustrations/Figure";
+import { ArtPanel } from "@/components/illustrations/Guilloche";
 import { StampScene } from "@/components/illustrations/Scenes";
 import { Reveal } from "@/components/Reveal";
 import { hours, site } from "@/config/site";
@@ -61,9 +62,9 @@ export default function Home() {
               </li>
             </ul>
           </div>
-          <div className="hero__art art-panel">
+          <ArtPanel id="g-hero" className="hero__art">
             <StampScene />
-          </div>
+          </ArtPanel>
         </div>
       </section>
 

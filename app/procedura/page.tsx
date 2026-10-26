@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactStrip } from "@/components/ContactStrip";
+import { ArtPanel } from "@/components/illustrations/Guilloche";
 import { SigningScene } from "@/components/illustrations/Scenes";
 import { Notice } from "@/components/Notice";
 import { PageHero } from "@/components/PageHero";
@@ -18,9 +19,9 @@ export default function ProcedurePage() {
         eyebrow="Cum decurge o procedură"
         title="De la primul telefon la actul semnat"
         art={
-          <div className="art-panel art-panel--wide">
+          <ArtPanel id="g-proc" className="art-panel--wide">
             <SigningScene />
-          </div>
+          </ArtPanel>
         }
       >
         <p>

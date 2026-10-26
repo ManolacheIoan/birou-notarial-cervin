@@ -8,8 +8,9 @@ import { BUSINESS_NAME, site } from "@/config/site";
 import "./globals.css";
 
 // Fonturi găzduite local: Playfair Display (serif clasic, contrast mare) pentru titluri
-// și Inter pentru text. Fiecare are fișier „latin” + „latin-ext” (ă, â, î, ș, ț);
-// fără `adjustFontFallback`, ca diacriticele să nu cadă pe fontul de rezervă.
+// și Inter pentru text. Fiecare are fișierul „latin” plus un subset minuscul „ro”
+// (ă, ș, ț și variantele cu sedilă, ~3 KB), preîncărcat, ca textul să apară direct
+// cu diacriticele corecte. Fără `adjustFontFallback`, ca ele să nu cadă pe fontul de rezervă.
 const display = localFont({
   src: "./fonts/playfair-display-latin-wght-normal.woff2",
   weight: "400 900",
@@ -18,12 +19,11 @@ const display = localFont({
   adjustFontFallback: false,
 });
 const displayExt = localFont({
-  src: "./fonts/playfair-display-latin-ext-wght-normal.woff2",
+  src: "./fonts/playfair-display-ro-wght-normal.woff2",
   weight: "400 900",
   variable: "--font-display-ext",
   display: "swap",
   adjustFontFallback: false,
-  preload: false,
 });
 const text = localFont({
   src: "./fonts/inter-latin-wght-normal.woff2",
@@ -33,12 +33,11 @@ const text = localFont({
   adjustFontFallback: false,
 });
 const textExt = localFont({
-  src: "./fonts/inter-latin-ext-wght-normal.woff2",
+  src: "./fonts/inter-ro-wght-normal.woff2",
   weight: "100 900",
   variable: "--font-text-ext",
   display: "swap",
   adjustFontFallback: false,
-  preload: false,
 });
 
 export const metadata: Metadata = {

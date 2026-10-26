@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowIcon } from "@/components/icons";
+import { ArtPanel } from "@/components/illustrations/Guilloche";
 import { EmptyRegisterScene } from "@/components/illustrations/Scenes";
 
 export const metadata: Metadata = { title: "Pagină negăsită" };
@@ -35,9 +36,9 @@ export default function NotFound() {
             ))}
           </ul>
         </div>
-        <div className="art-panel lost__art" aria-hidden="true">
+        <ArtPanel id="g-404" className="lost__art">
           <EmptyRegisterScene />
-        </div>
+        </ArtPanel>
       </div>
     </section>
   );
