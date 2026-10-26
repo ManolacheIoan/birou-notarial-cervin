@@ -491,7 +491,7 @@ main:focus {
   text-decoration: none;
   color: var(--green);
   margin-right: auto;
-  min-width: 0;
+  flex: none;
 }
 .logo__word {
   display: flex;
@@ -499,6 +499,7 @@ main:focus {
   line-height: 1.05;
 }
 .logo__prefix {
+  white-space: nowrap;
   font-size: 0.68rem;
   font-weight: 650;
   letter-spacing: 0.2em;
@@ -1236,7 +1237,7 @@ main:focus {
     white-space: nowrap;
   }
 }
-@media (min-width: 1120px) and (max-width: 1379px) {
+@media (min-width: 1120px) and (max-width: 1439px) {
   .nav__phone {
     display: none !important;
   }
@@ -2401,4 +2402,9 @@ main:focus {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Antetul folosește mai multă lățime decât conținutul, ca meniul și telefonul să încapă aerisit. */
+.site-header__inner {
+  max-width: 1400px;
 }
