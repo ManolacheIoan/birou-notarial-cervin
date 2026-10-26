@@ -51,7 +51,7 @@ export function Header() {
             ))}
           </ul>
           <div className="nav__actions">
-            <a className="btn btn--sm" href={`tel:${site.phoneHref}`}>
+            <a className="btn btn--sm nav__phone" href={`tel:${site.phoneHref}`}>
               <PhoneIcon size={18} /> {site.phone}
             </a>
             <Link href="/programari/" className="btn btn--primary btn--sm" onClick={close}>

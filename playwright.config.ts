@@ -1,7 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 /** Testele rulează pe build-ul static din out/ (rulează întâi `npm run build`). */
-const PORT = 4175;
+const PORT = 4191;
 
 export default defineConfig({
   testDir: "tests",

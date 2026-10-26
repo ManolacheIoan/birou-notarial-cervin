@@ -8,7 +8,7 @@ import { brotliCompressSync, constants, gzipSync } from "node:zlib";
 const cache = new Map();
 
 const root = join(process.cwd(), "out");
-const port = Number(process.env.PORT ?? 4175);
+const port = Number(process.env.PORT ?? 4191);
 const types = {
   ".html": "text/html; charset=utf-8",
   ".js": "text/javascript",

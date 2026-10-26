@@ -37,6 +37,7 @@ function HairBack({ look }: { look: Look }) {
       fill={look.hairColor}
       stroke={INK}
       strokeWidth="1.2"
+      transform="translate(0 6)"
     />
   );
 }
@@ -124,7 +125,7 @@ function Prop({ look }: { look: Look }) {
           {/* Ștampila și stiloul notarului */}
           <ellipse cx="56" cy="201" rx="16" ry="3" fill={INK} opacity=".12" />
           <rect x="40" y="192" width="32" height="8" rx="2" fill={BRASS} {...s} />
-          <path d="M50 192c-2-6-2-12 2-16-4-6 0-14 4-14s8 8 4 14c4 4 4 10 2 16Z" fill="#12372F" {...s} />
+          <path d="M50 192c-2-6-2-12 2-16-4-6 0-14 4-14s8 8 4 14c4 4 4 10 2 16Z" fill="#6B4E2E" {...s} />
           <path d="m112 204 52-14" stroke={INK} strokeWidth="4" strokeLinecap="round" />
           <path d="m112 204 52-14" stroke={BRASS} strokeWidth="1.2" strokeLinecap="round" />
           <path d="m108 205 5-1" stroke={INK} strokeWidth="1.6" strokeLinecap="round" />
@@ -216,11 +217,12 @@ export function StaffFigure({ kind, className }: { kind: FigureKind; className?:
         <path d="M24 214c4-42 32-66 76-68" fill={`url(#${hatchLight})`} />
         <path d="M30 220c6-38 26-58 54-70M170 220c-6-38-26-58-54-70" fill="none" stroke={BRASS} strokeOpacity=".5" strokeWidth=".6" />
         {/* Gât */}
-        <path d="M89 122v26q11 8 22 0v-26Z" fill={SKIN} stroke={INK} strokeWidth="1.1" />
-        <path d="M89 130h22v10H89Z" fill={`url(#${hatch})`} opacity=".45" />
+        <path d="M88 126v22q12 8 24 0v-22Z" fill={SKIN} stroke={INK} strokeWidth="1.1" />
+        <path d="M88 134h24v8H88Z" fill={`url(#${hatch})`} opacity=".45" />
         <Collar look={look} />
         <path d="m84 146 8 44 8-12M116 146l-8 44-8-12" fill="none" stroke={INK} strokeWidth="1" />
         {/* Cap */}
+        <g transform="translate(0 6)">
         <ellipse cx="76" cy="101" rx="4" ry="7" fill={SKIN} stroke={INK} strokeWidth="1" />
         <ellipse cx="124" cy="101" rx="4" ry="7" fill={SKIN} stroke={INK} strokeWidth="1" />
         <ellipse cx="100" cy="98" rx="25" ry="30" fill={SKIN} stroke={INK} strokeWidth="1.2" />
@@ -244,6 +246,7 @@ export function StaffFigure({ kind, className }: { kind: FigureKind; className?:
               <path d="M98.5 98.5q1.5-1.5 3 0M85.5 98l-9-2M114.5 98l9-2" />
             </g>
           )}
+        </g>
         </g>
         {/* Masa de lucru */}
         <rect x="20" y="198" width="160" height="22" fill="#E6DAC0" />
