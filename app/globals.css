@@ -760,7 +760,7 @@ main:focus {
 
 /* Antetul paginilor interioare */
 .page-hero {
-  padding: 48px 0 40px;
+  padding: 36px 0 32px;
   border-bottom: 1px solid var(--line);
 }
 .page-hero__inner {
@@ -778,7 +778,7 @@ main:focus {
 }
 @media (min-width: 900px) {
   .page-hero {
-    padding: 72px 0 56px;
+    padding: 56px 0 44px;
   }
   .page-hero--art .page-hero__inner {
     grid-template-columns: 1.4fr 1fr;
@@ -787,7 +787,7 @@ main:focus {
 
 /* Secțiuni */
 .section {
-  padding-block: 64px;
+  padding-block: 44px;
 }
 .section--tight {
   padding-block: 40px;
@@ -798,11 +798,11 @@ main:focus {
 }
 .section__head {
   max-width: 680px;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
 }
 @media (min-width: 900px) {
   .section {
-    padding-block: 96px;
+    padding-block: 64px;
   }
 }
 
@@ -938,7 +938,7 @@ main:focus {
    ========================================================================== */
 
 .hero {
-  padding: 36px 0 56px;
+  padding: 28px 0 24px;
 }
 .hero__inner {
   display: grid;
@@ -983,7 +983,7 @@ main:focus {
 }
 @media (min-width: 900px) {
   .hero {
-    padding: 64px 0 88px;
+    padding: 48px 0 32px;
   }
   .hero__inner {
     grid-template-columns: 1.05fr 1fr;
