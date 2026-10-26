@@ -2058,3 +2058,144 @@ main:focus {
   color: var(--green);
   background: var(--parchment);
 }
+
+/* ==========================================================================
+   Programări
+   ========================================================================== */
+
+.h3 {
+  font-size: 1.3rem;
+}
+.appointment-layout {
+  display: grid;
+  gap: 32px;
+  align-items: start;
+  padding-bottom: 32px;
+}
+@media (min-width: 980px) {
+  .appointment-layout {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 48px;
+  }
+}
+.appointment,
+.form-result {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  box-shadow: var(--shadow);
+}
+@media (min-width: 640px) {
+  .appointment,
+  .form-result {
+    padding: 32px;
+  }
+}
+.appointment__grid {
+  display: grid;
+  gap: 0 20px;
+}
+@media (min-width: 640px) {
+  .appointment__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .field--wide {
+    grid-column: 1 / -1;
+  }
+}
+.check--plain {
+  padding: 0;
+  font-weight: 400 !important;
+  color: var(--ink) !important;
+}
+.check--plain:hover {
+  background: none;
+}
+.appointment__submit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 8px;
+}
+.appointment__submit p {
+  margin: 0;
+}
+.btn[disabled] {
+  opacity: 0.7;
+  cursor: progress;
+}
+.error-summary {
+  border: 2px solid var(--danger);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 22px;
+  background: #fdf3f1;
+}
+.error-summary__title {
+  font-weight: 650;
+  color: var(--danger);
+  margin: 0 0 6px;
+}
+.error-summary ul {
+  margin: 0;
+}
+.error-summary a {
+  color: var(--danger);
+}
+.form-result h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+.form-result h2:focus {
+  outline: none;
+}
+.form-result[data-status="not-sent"],
+.form-result[data-status="error"] {
+  border-left: 3px solid var(--brass);
+}
+.form-result[data-status="sent"] {
+  border-left: 3px solid var(--success);
+}
+.form-result__summary {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 16px 18px;
+  background: var(--parchment);
+  border-radius: var(--radius);
+}
+.form-result__summary div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+.form-result__summary dt {
+  font-weight: 650;
+  color: var(--green);
+  min-width: 120px;
+}
+.form-result__summary dd {
+  margin: 0;
+}
+.form-result__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.appointment-aside {
+  display: grid;
+  gap: 16px;
+}
+.appointment-aside .card p:last-child {
+  margin-bottom: 0;
+}
+.field {
+  align-content: start;
+}
+.field .check input {
+  width: 20px;
+  height: 20px;
+  min-height: 0;
+  padding: 0;
+}
