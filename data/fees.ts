@@ -13,7 +13,7 @@ export type FeeRow = {
 };
 
 export const feeTable: FeeRow[] = [
-  { slug: "vanzare-cumparare", label: "Contract de vânzare-cumpărare imobil", fee: "procent din valoare", note: "vezi estimatorul de mai jos" },
+  { slug: "vanzare-cumparare", label: "Contract de vânzare-cumpărare imobil", fee: "procent din valoare", note: "vezi estimatorul de mai sus" },
   { slug: "donatie", label: "Contract de donație imobil", fee: "procent din valoare", note: "similar vânzării, cu grilă proprie" },
   { slug: "ipoteca", label: "Contract de ipotecă", fee: "de la 450 lei", note: "în funcție de valoarea creditului" },
   { slug: "succesiune", label: "Dezbatere succesorală", fee: "de la 600 lei", note: "în funcție de masa succesorală" },
