@@ -5,7 +5,7 @@ import { StaffFigure } from "@/components/illustrations/Figure";
 import { ArtPanel } from "@/components/illustrations/Guilloche";
 import { StampScene } from "@/components/illustrations/Scenes";
 import { Reveal } from "@/components/Reveal";
-import { hours, site } from "@/config/site";
+import { hours } from "@/config/site";
 import { services } from "@/data/services";
 import { staff } from "@/data/staff";
 import { buildChecklist, toQuery } from "@/lib/checklist";
@@ -37,7 +37,6 @@ export default function Home() {
       <section className="hero">
         <div className="container hero__inner">
           <div className="hero__text">
-            <p className="eyebrow">Birou notarial · {site.area}</p>
             <h1>
               Acte autentice, întocmite cu grijă și <em>explicate pe înțeles</em>.
             </h1>
