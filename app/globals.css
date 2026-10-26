@@ -1972,3 +1972,89 @@ main:focus {
     translate: 0 0;
   }
 }
+
+/* ==========================================================================
+   Echipa
+   ========================================================================== */
+
+.people {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+}
+.people--lead {
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+.person {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: grid;
+  gap: 22px;
+  align-content: start;
+  transition: box-shadow 0.3s ease;
+}
+.person:hover {
+  box-shadow: var(--shadow-lift);
+}
+.person__art {
+  max-width: 260px;
+  width: 100%;
+  margin-inline: auto;
+}
+.people--lead .person {
+  align-items: center;
+}
+@media (min-width: 760px) {
+  .people--lead {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1100px) {
+  .people--lead .person {
+    grid-template-columns: 220px 1fr;
+    padding: 32px;
+  }
+}
+.person h3 {
+  font-size: 1.55rem;
+  margin-bottom: 10px;
+}
+.person--small h3 {
+  font-size: 1.3rem;
+}
+.person--small .person__art {
+  max-width: 200px;
+}
+.person__role {
+  margin: 0 0 4px;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--brass-ink);
+}
+.person__text > p:not(.person__role) {
+  color: var(--muted);
+}
+.person__tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.person__tags li {
+  padding: 3px 12px;
+  border: 1px solid rgb(168 132 63 / 0.6);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--green);
+  background: var(--parchment);
+}
