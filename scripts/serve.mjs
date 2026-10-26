@@ -67,7 +67,11 @@ createServer(async (req, res) => {
       headers["content-encoding"] = enc;
     }
   }
-  if (file.includes("/_next/static/")) headers["cache-control"] = "public, max-age=31536000, immutable";
+  // Fișierele cu hash în nume se păstrează în cache; restul (paginile HTML etc.) se verifică
+  // la fiecare încărcare, ca după un build nou browserul să nu arate versiunea veche.
+  headers["cache-control"] = file.includes("/_next/static/")
+    ? "public, max-age=31536000, immutable"
+    : "no-cache";
   res.writeHead(200, headers);
   res.end(body);
 })
