@@ -2333,3 +2333,26 @@ main:focus {
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+/* ==========================================================================
+   Texte lungi
+   ========================================================================== */
+
+.prose {
+  max-width: 70ch;
+  padding-bottom: 48px;
+}
+.prose h2 {
+  font-size: clamp(1.35rem, 3vw, 1.65rem);
+  margin-top: 1.8em;
+}
+.prose li {
+  margin-bottom: 0.4em;
+}
+.prose li::marker {
+  color: var(--brass);
+}
+.prose__updated {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
