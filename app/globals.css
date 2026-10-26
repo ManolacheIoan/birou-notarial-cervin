@@ -2265,3 +2265,71 @@ main:focus {
     transform: translateY(-4px);
   }
 }
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact-grid {
+  display: grid;
+  gap: 28px;
+  align-items: start;
+  padding-bottom: 48px;
+}
+@media (min-width: 980px) {
+  .contact-grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+  }
+}
+.contact-cards {
+  display: grid;
+  gap: 16px;
+}
+.contact-card {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 18px;
+}
+.contact-card > .icon {
+  color: var(--brass-ink);
+  margin-top: 4px;
+}
+.contact-card h2 {
+  margin-bottom: 6px;
+}
+.contact-card p {
+  margin-bottom: 6px;
+}
+.contact-card__big {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.contact-card address {
+  font-style: normal;
+  margin-bottom: 6px;
+}
+.contact-side {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+.contact-map {
+  margin: 0;
+  width: 100%;
+}
+.contact-map .art-panel {
+  padding: 14px;
+}
+.contact-map svg {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.contact-map figcaption {
+  position: relative;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}

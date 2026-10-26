@@ -135,3 +135,48 @@ export function EmptyRegisterScene() {
     </svg>
   );
 }
+
+/** Plan stilizat al străzii, desenat local (fără hărți sau scripturi externe). */
+export function StreetPlan() {
+  return (
+    <svg className="street-plan" viewBox="0 0 480 320" aria-hidden="true" focusable="false">
+      <rect width="480" height="320" fill="#EFE6D2" />
+      <g fill="#E6DAC0" stroke={INK} strokeOpacity=".25" strokeWidth=".8">
+        <rect x="20" y="20" width="130" height="90" rx="4" />
+        <rect x="190" y="20" width="110" height="90" rx="4" />
+        <rect x="340" y="20" width="120" height="90" rx="4" />
+        <rect x="20" y="150" width="130" height="150" rx="4" />
+        <rect x="340" y="150" width="120" height="70" rx="4" />
+        <rect x="340" y="250" width="120" height="50" rx="4" />
+      </g>
+      {/* Parcul */}
+      <rect x="190" y="150" width="110" height="150" rx="4" fill="#D9E2D3" stroke={GREEN} strokeOpacity=".3" />
+      <g fill="#B9C7BF">
+        {[
+          [215, 180],
+          [270, 190],
+          [230, 240],
+          [280, 260],
+          [210, 280],
+        ].map(([x, y]) => (
+          <circle key={`${x}-${y}`} cx={x} cy={y} r="9" />
+        ))}
+      </g>
+      <g stroke={PAPER} strokeWidth="12" strokeLinecap="round">
+        <path d="M0 130h480M170 0v320M320 0v320" />
+      </g>
+      <g stroke={BRASS} strokeWidth=".8" strokeDasharray="6 6">
+        <path d="M0 130h480M170 0v320M320 0v320" />
+      </g>
+      {/* Clădirea biroului */}
+      <rect x="40" y="168" width="70" height="56" rx="3" fill={GREEN} stroke={INK} strokeWidth="1" />
+      <path d="M48 176h54M48 184h54" stroke={BRASS} strokeOpacity=".7" />
+      <g transform="translate(75 150)">
+        <circle r="17" fill={PAPER} stroke={BRASS} strokeWidth="1.6" />
+        <circle r="12" fill="none" stroke={GREEN} strokeWidth="1" strokeDasharray="1.5 2" />
+        <path d="M-6 -3h12M-4 -1v8M4 -1v8M-6 8h12" stroke={GREEN} strokeWidth="1.4" strokeLinecap="round" />
+        <path d="M0 17v10" stroke={BRASS} strokeWidth="1.6" />
+      </g>
+    </svg>
+  );
+}
