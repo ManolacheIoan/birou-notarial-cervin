@@ -2356,3 +2356,48 @@ main:focus {
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+/* ==========================================================================
+   404
+   ========================================================================== */
+
+.lost__inner {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .lost__inner {
+    grid-template-columns: 1.1fr 1fr;
+    gap: 64px;
+  }
+}
+.lost h1 {
+  max-width: 16ch;
+}
+.lost__links {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.lost__art {
+  padding: 4%;
+}
+.lost__art svg {
+  width: 100%;
+  height: auto;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .empty-scene__ring {
+    animation: ring-turn 40s linear infinite;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+}
+@keyframes ring-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
