@@ -4,6 +4,10 @@ Site de prezentare pentru un birou notarial: servicii, listă interactivă de ac
 
 ![Pagina principală Birou Notarial Cervin](docs/screenshot.webp)
 
+## English summary
+
+Portfolio project: a website for a fictional notary office. It explains procedures in plain language with an interactive checklist of required documents, a fee estimator and a timeline for each procedure, and ends with online booking. Built with Next.js and TypeScript, tested with Vitest, Playwright and axe (accessibility). The site itself is in Romanian.
+
 > **Proiect demonstrativ (portofoliu).** Biroul, persoanele, adresa, numerele de telefon, datele de înregistrare și onorariile sunt **fictive**. Textele au caracter general, nu reprezintă consultanță juridică și nu citează acte normative. Site-ul este marcat `noindex`, iar formularul de programare nu trimite nimic până nu conectați un backend (vezi mai jos). Nota „demo” apare intenționat doar aici, în README; site-ul arată ca unul final.
 
 ## Tehnologie
