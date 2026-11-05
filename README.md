@@ -2,6 +2,8 @@
 
 Site de prezentare pentru un birou notarial: servicii, listă interactivă de acte necesare, estimator de onorarii, cronologia unei proceduri, echipă, programări, întrebări frecvente și pagini de contact și politici.
 
+![Pagina principală Birou Notarial Cervin](docs/screenshot.webp)
+
 > **Proiect demonstrativ (portofoliu).** Biroul, persoanele, adresa, numerele de telefon, datele de înregistrare și onorariile sunt **fictive**. Textele au caracter general, nu reprezintă consultanță juridică și nu citează acte normative. Site-ul este marcat `noindex`, iar formularul de programare nu trimite nimic până nu conectați un backend (vezi mai jos). Nota „demo” apare intenționat doar aici, în README; site-ul arată ca unul final.
 
 ## Tehnologie
