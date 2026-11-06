@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { MobileCallBar } from "@/components/MobileCallBar";
 import { BUSINESS_NAME, site } from "@/config/site";
 import "./globals.css";
+import { withBase } from "@/lib/base-path";
 
 // Fonturi găzduite local: Playfair Display (serif clasic, contrast mare) pentru titluri
 // și Inter pentru text. Fiecare are fișierul „latin” plus un subset minuscul „ro”
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   title: { default: `${BUSINESS_NAME}: ${site.tagline}`, template: `%s | ${BUSINESS_NAME}` },
   description: `${BUSINESS_NAME}: ${site.shortDescription}`,
   robots: { index: false, follow: false, nocache: true, googleBot: { index: false, follow: false } },
-  icons: { icon: "/icon.svg" },
+  icons: { icon: withBase("/icon.svg") },
 };
 
 export const viewport: Viewport = {

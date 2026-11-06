@@ -823,7 +823,7 @@ main:focus {
   width: 360px;
   height: 360px;
   translate: 0 -50%;
-  background: url("/guilloche-light.svg") no-repeat center / contain;
+  background: url("../public/guilloche-light.svg") no-repeat center / contain;
   opacity: 0.16;
   pointer-events: none;
 }

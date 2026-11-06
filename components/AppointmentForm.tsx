@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { CalendarIcon, MailIcon, PhoneIcon } from "@/components/icons";
 import { BUSINESS_NAME, site } from "@/config/site";
@@ -306,7 +307,7 @@ export function AppointmentForm() {
           />
           <span>
             Sunt de acord să fiu contactat(ă) pentru programare. Detalii în{" "}
-            <a href="/confidentialitate/">politica de confidențialitate</a>.
+            <Link href="/confidentialitate/">politica de confidențialitate</Link>.
           </span>
         </label>
         {err("consent")}
