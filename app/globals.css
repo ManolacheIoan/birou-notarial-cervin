@@ -2145,6 +2145,10 @@ main:focus {
 }
 .error-summary a {
   color: var(--danger);
+  /* At least 24px tall, so each link is easy to tap (WCAG 2.2 target size). */
+  display: inline-block;
+  min-height: 24px;
+  padding-block: 2px;
 }
 .form-result h2 {
   font-size: clamp(1.5rem, 3.5vw, 2rem);
