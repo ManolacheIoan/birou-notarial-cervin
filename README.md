@@ -2,6 +2,8 @@
 
 Site de prezentare pentru un birou notarial: servicii, listă interactivă de acte necesare, estimator de onorarii, cronologia unei proceduri, echipă, programări, întrebări frecvente și pagini de contact și politici.
 
+**Live:** [manolacheioan.github.io/birou-notarial-cervin](https://manolacheioan.github.io/birou-notarial-cervin/)
+
 ![Pagina principală Birou Notarial Cervin](docs/screenshot.webp)
 
 ## English summary
